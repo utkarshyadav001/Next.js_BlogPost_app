@@ -1,10 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
-// import Script from 'next/script'
-import styles from '../styles/Home.module.css'
 import Link from 'next/link'
-import Dummy from '../component/dummy'
-
+import styles from '../styles/Home.module.css'
 export default function Home() {
   return (
     <div className={`${styles.container} ${styles.container}`}>
@@ -12,23 +9,18 @@ export default function Home() {
         <title>Hunting Coder</title>
         <meta name="description" content="Hunting coder is a blog for Beginners to start coding junery" />
         <link rel="icon" href="/favicon.ico" />
-        {/* <script src='/src.js'></script> */}
       </Head>
 
-      {/* <Script src='/src.js' strategy='lazyOnload'></Script> */}
+      <style jsx global >
+        {`
 
-      <Dummy />
-      <nav className={styles.navbar}>
-        <ul>
-          <Link href="/"><a><li>Home</li></a></Link>
-          <Link href="/about"><a><li>About</li></a></Link>
-          <Link href="/blog"><a><li>Blog's</li></a></Link>
-          <Link href="/contact"><a><li>Contact us</li></a></Link>
-        </ul>
-      </nav>
+        `}
+      </style>
+
+      
 
       <main className={styles.main}>
-        <h1 className={`{styles.title}  topHeading bgyellow`}>
+        <h1 className={styles.title}>
           Hunting Coder
         </h1>
 
@@ -38,135 +30,53 @@ export default function Home() {
 
         <div className={styles.blogs}>
 
+
           <h2>Top tranding blog's</h2>
-
           <div className={styles.grid}>
-            <a href="https://nextjs.org/docs" className={styles.card}>
-              <h2>Documentation &rarr;</h2>
+          <Link href="http://localhost:3000/blog">
+            <a className={styles.card}>
+              <h2>How to learn javaScript &rarr;</h2>
+              <p>Find in-depth information about Next.js features and APINext.js features and API.</p>
+            </a>
+            </Link>
+            <Link href="http://localhost:3000/blog">
+            <a className={styles.card}>
+              <h2>How to learn Python &rarr;</h2>
               <p>Find in-depth information about Next.js features and API.</p>
             </a>
-            <a href="https://nextjs.org/docs" className={styles.card}>
-              <h2>Documentation &rarr;</h2>
+            </Link>
+            <Link href="http://localhost:3000/blog">
+            <a className={styles.card}>
+              <h2>How to learn Nodejs &rarr;</h2>
               <p>Find in-depth information about Next.js features and API.</p>
             </a>
-            <a href="https://nextjs.org/docs" className={styles.card}>
-              <h2>Documentation &rarr;</h2>
+            </Link>
+            <Link href="http://localhost:3000/blog">
+            <a className={styles.card}>
+              <h2>How to learn Nextjs  &rarr;</h2>
               <p>Find in-depth information about Next.js features and API.</p>
             </a>
-            <a href="https://nextjs.org/docs" className={styles.card}>
-              <h2>Documentation &rarr;</h2>
+            </Link>
+            <Link href="http://localhost:3000/blog">
+            <a className={styles.card}>
+              <h2>How to learn C++  &rarr;</h2>
               <p>Find in-depth information about Next.js features and API.</p>
             </a>
-            <a href="https://nextjs.org/docs" className={styles.card}>
-              <h2>Documentation &rarr;</h2>
+            </Link>
+            <Link href="http://localhost:3000/blog">
+            <a className={styles.card}>
+              <h2>How to learn Java  &rarr;</h2>
               <p>Find in-depth information about Next.js features and API.</p>
             </a>
-            <a href="https://nextjs.org/docs" className={styles.card}>
-              <h2>Documentation &rarr;</h2>
-              <p>Find in-depth information about Next.js features and API.</p>
-            </a>
-            <a href="https://nextjs.org/docs" className={styles.card}>
-              <h2>Documentation &rarr;</h2>
-              <p>Find in-depth information about Next.js features and API.</p>
-            </a>
-            <a href="https://nextjs.org/docs" className={styles.card}>
-              <h2>Documentation &rarr;</h2>
-              <p>Find in-depth information about Next.js features and API.</p>
-            </a>
-            <a href="https://nextjs.org/docs" className={styles.card}>
-              <h2>Documentation &rarr;</h2>
-              <p>Find in-depth information about Next.js features and API.</p>
-            </a>
-            <a href="https://nextjs.org/docs" className={styles.card}>
-              <h2>Documentation &rarr;</h2>
-              <p>Find in-depth information about Next.js features and API.</p>
-            </a>
-            <a href="https://nextjs.org/docs" className={styles.card}>
-              <h2>Documentation &rarr;</h2>
-              <p>Find in-depth information about Next.js features and API.</p>
-            </a>
-            <a href="https://nextjs.org/docs" className={styles.card}>
-              <h2>Documentation &rarr;</h2>
-              <p>Find in-depth information about Next.js features and API.</p>
-            </a>
-            <a href="https://nextjs.org/docs" className={styles.card}>
-              <h2>Documentation &rarr;</h2>
-              <p>Find in-depth information about Next.js features and API.</p>
-            </a>
-            <a href="https://nextjs.org/docs" className={styles.card}>
-              <h2>Documentation &rarr;</h2>
-              <p>Find in-depth information about Next.js features and API.</p>
-            </a>
-            <a href="https://nextjs.org/docs" className={styles.card}>
-              <h2>Documentation &rarr;</h2>
-              <p>Find in-depth information about Next.js features and API.</p>
-            </a>
-            <a href="https://nextjs.org/docs" className={styles.card}>
-              <h2>Documentation &rarr;</h2>
-              <p>Find in-depth information about Next.js features and API.</p>
-            </a>
-            <a href="https://nextjs.org/docs" className={styles.card}>
-              <h2>Documentation &rarr;</h2>
-              <p>Find in-depth information about Next.js features and API.</p>
-            </a>
-            <a href="https://nextjs.org/docs" className={styles.card}>
-              <h2>Documentation &rarr;</h2>
-              <p>Find in-depth information about Next.js features and API.</p>
-            </a>
-            <a href="https://nextjs.org/docs" className={styles.card}>
-              <h2>Documentation &rarr;</h2>
-              <p>Find in-depth information about Next.js features and API. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eligendi, perferendis laudantium earum nulla dignissimos, ab minima illo nam dolor temporibus modi dolores aliquam dolorem illum labore nisi libero perspiciatis quasi numquam qui!</p>
-            </a>
-            <a href="https://nextjs.org/docs" className={styles.card}>
-              <h2>Documentation &rarr;</h2>
-              <p>Find in-depth information about Next.js features and API.</p>
-            </a>
-            <a href="https://nextjs.org/docs" className={styles.card}>
-              <h2>Documentation &rarr;</h2>
-              <p>Find in-depth information about Next.js features and API.</p>
-            </a>
-            <a href="https://nextjs.org/docs" className={styles.card}>
-              <h2>Documentation &rarr;</h2>
-              <p>Find in-depth information about Next.js features and API.</p>
-            </a>
-            <a href="https://nextjs.org/docs" className={styles.card}>
-              <h2>Documentation &rarr;</h2>
-              <p>Find in-depth information about Next.js features and API.</p>
-            </a>
-            <a href="https://nextjs.org/docs" className={styles.card}>
-              <h2>Documentation &rarr;</h2>
-              <p>Find in-depth information about Next.js features and API.</p>
-            </a>
-
-            <a href="https://nextjs.org/learn" className={styles.card}>
-              <h2>Learn &rarr;</h2>
-              <p>Learn about Next.js in an interactive course with quizzes!</p>
-            </a>
-
-            <a
-              href="https://github.com/vercel/next.js/tree/canary/examples"
-              className={styles.card}
-            >
-              <h2>Examples &rarr;</h2>
-              <p>Discover and deploy boilerplate example Next.js projects.</p>
-            </a>
-
-            <a
-              href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              className={styles.card}
-            >
-              <h2>Deploy &rarr;</h2>
-              <p>
-                Instantly deploy your Next.js site to a public URL with Vercel.
-              </p>
-            </a>
+            </Link>
           </div>
         </div>
       </main >
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+        <Link href="http://localhost:3000/blog">
+            <a 
+          href="http://localhost:3000"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -175,6 +85,7 @@ export default function Home() {
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
+            </Link>
       </footer>
     </div >
   )
