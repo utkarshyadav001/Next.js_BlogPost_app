@@ -1,22 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import styles from "../styles/blog.module.css"
 import Link from 'next/link'
 import Head from 'next/head'
 
-const Blog = () => {
+const Blog = (props) => {
 
-  const [blogs, setBlogs] = useState(null)
+  const [blogs, setBlogs] = useState(props.data.blogs);
 
-  useEffect(() => {
-    fetch("http://localhost:3000/api/blogs")
-      .then((a) => {
-        return a.json()
-      }).then((data) => {
-        setBlogs(data.blogs)
-      });
-
-  }, [])
-
+  // console.log(props)
 
   return (
     <div>
@@ -35,15 +26,15 @@ const Blog = () => {
             blogs && blogs.map(blog => {
               // console.log(blog);
               return <Link href={`http://localhost:3000/blogpost/${blog.slug}`} key={blog.slug}>
-                            <a className={styles.card}>
-                              <h2>{blog.title}</h2>
-                              <p>{blog.desc.substr(0, 200)}...</p>
-                            </a>
-                          </Link>
+                <a className={styles.card}>
+                  <h2>{blog.title}</h2>
+                  <p>{blog.desc.substr(0, 200)}...</p>
+                </a>
+              </Link>
             })
           }
 
-          
+
 
           <Link href="http://localhost:3000/blog">
             <a
@@ -70,6 +61,17 @@ const Blog = () => {
       </main>
     </div>
   )
+}
+
+
+export async function getServerSideProps(context) {
+
+  let fetchBlogsData = await fetch("http://localhost:3000/api/blogs");
+  let data = await fetchBlogsData.json()
+
+  return {
+    props: { data }, // will be passed to the page component as props
+  }
 }
 
 export default Blog
