@@ -2,17 +2,18 @@ import React, { useState } from 'react'
 import styles from "../styles/blog.module.css"
 import Link from 'next/link'
 import Head from 'next/head'
+import * as fs from "fs";
 
 const Blog = (props) => {
 
-  const [blogs, setBlogs] = useState(props.data.blogs);
+  const [blogs, setBlogs] = useState(props.blogs);
 
-  // console.log(props)
+  
 
   return (
     <div>
       <Head>
-        <title>Hunting Coder Blogs</title>
+        <title>Hunting Coder || Blogs</title>
         <meta name="description" content="Hunting coder is a blog for Beginners to start coding junery" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -25,7 +26,7 @@ const Blog = (props) => {
           {
             blogs && blogs.map(blog => {
               // console.log(blog);
-              return <Link href={`http://localhost:3000/blogpost/${blog.slug}`} key={blog.slug}>
+              return <Link href={`/blogpost/${blog.slug}`} key={blog.slug}>
                 <a className={styles.card}>
                   <h2>{blog.title}</h2>
                   <p>{blog.desc.substr(0, 200)}...</p>
@@ -36,7 +37,7 @@ const Blog = (props) => {
 
 
 
-          <Link href="http://localhost:3000/blog">
+          <Link href="/blog">
             <a
               href="https://github.com/vercel/next.js/tree/canary/examples"
               className={styles.card}
@@ -46,7 +47,7 @@ const Blog = (props) => {
             </a>
           </Link>
 
-          <Link href="http://localhost:3000/blog">
+          <Link href="/blog">
             <a
               href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
               className={styles.card}
@@ -64,13 +65,29 @@ const Blog = (props) => {
 }
 
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
 
-  let fetchBlogsData = await fetch("http://localhost:3000/api/blogs");
-  let data = await fetchBlogsData.json()
+  // let fetchBlogsData = await fetch("/api/blogs");
+  // let data = await fetchBlogsData.json()
+
+  let fileNameArray;
+  let blogs = []
+
+  fileNameArray = await fs.promises.readdir("blogpost");
+
+  // console.log(fileNameArray,"e");
+
+  for (let index = 0; index < fileNameArray.length; index++) {
+    const fileName = fileNameArray[index];
+    // console.log(fileName)
+    await fs.promises.readFile(`blogpost/${fileName}`, "utf-8").then((e)=>{
+      blogs.push( JSON.parse(e))
+    });
+  }
+  
 
   return {
-    props: { data }, // will be passed to the page component as props
+    props: { blogs: blogs }, // will be passed to the page component as props
   }
 }
 

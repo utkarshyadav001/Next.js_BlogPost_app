@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Image from 'next/image'
+// import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 export default function Home() {
@@ -31,39 +31,39 @@ export default function Home() {
         <div className={styles.blogs}>
 
 
-          <h2>Top tranding blog's</h2>
+          <h2>Top tranding blogs</h2>
           <div className={styles.grid}>
-          <Link href="http://localhost:3000/blog">
+          <Link href="/blog">
             <a className={styles.card}>
               <h2>How to learn javaScript &rarr;</h2>
               <p>Find in-depth information about Next.js features and APINext.js features and API.</p>
             </a>
             </Link>
-            <Link href="http://localhost:3000/blog">
+            <Link href="/blog">
             <a className={styles.card}>
               <h2>How to learn Python &rarr;</h2>
               <p>Find in-depth information about Next.js features and API.</p>
             </a>
             </Link>
-            <Link href="http://localhost:3000/blog">
+            <Link href="/blog">
             <a className={styles.card}>
               <h2>How to learn Nodejs &rarr;</h2>
               <p>Find in-depth information about Next.js features and API.</p>
             </a>
             </Link>
-            <Link href="http://localhost:3000/blog">
+            <Link href="/blog">
             <a className={styles.card}>
               <h2>How to learn Nextjs  &rarr;</h2>
               <p>Find in-depth information about Next.js features and API.</p>
             </a>
             </Link>
-            <Link href="http://localhost:3000/blog">
+            <Link href="/blog">
             <a className={styles.card}>
               <h2>How to learn C++  &rarr;</h2>
               <p>Find in-depth information about Next.js features and API.</p>
             </a>
             </Link>
-            <Link href="http://localhost:3000/blog">
+            <Link href="/blog">
             <a className={styles.card}>
               <h2>How to learn Java  &rarr;</h2>
               <p>Find in-depth information about Next.js features and API.</p>
@@ -74,15 +74,15 @@ export default function Home() {
       </main >
 
       <footer className={styles.footer}>
-        <Link href="http://localhost:3000/blog">
+        <Link href="/blog">
             <a 
-          href="http://localhost:3000"
+          href=""
           target="_blank"
           rel="noopener noreferrer"
         >
           Powered by{' '}
           <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+            {/* <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} /> */}
           </span>
         </a>
             </Link>
