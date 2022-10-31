@@ -29,7 +29,7 @@ const Blog = (props) => {
               return <Link href={`/blogpost/${blog.slug}`} key={blog.slug}>
                 <a className={styles.card}>
                   <h2>{blog.title}</h2>
-                  <p>{blog.desc.substr(0, 200)}...</p>
+                  <p>{blog.metadesc.substr(0, 200)}...</p>
                 </a>
               </Link>
             })
@@ -81,7 +81,9 @@ export async function getStaticProps(context) {
     const fileName = fileNameArray[index];
     // console.log(fileName)
     await fs.promises.readFile(`blogpost/${fileName}`, "utf-8").then((e)=>{
-      blogs.push( JSON.parse(e))
+      let { title, author, slug, metadesc} = JSON.parse(e);
+      let metaBlog = { title, author, slug, metadesc};
+      blogs.push( metaBlog)
     });
   }
   
