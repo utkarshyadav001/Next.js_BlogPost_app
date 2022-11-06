@@ -47,3 +47,18 @@ a {
 .navbar ul a :hover{
   color: blue;
 }
+
+.btn{
+  padding: 5px 8px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 15px 0px 0px 0px;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  color: green;
+}

@@ -1,0 +1,39 @@
+.main {
+    width: 55vw;
+    margin: 18px auto;
+}
+
+.form {
+    margin-top: 10px;
+    padding: 10px 4px;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.label {
+    margin: 14px 5px;
+}
+
+.input {
+    display: block;
+    width: 90%;
+    padding: 5px 5px;
+    font-size: 1.1rem;
+    outline: none;
+    margin: 5px 0px 15px 0px;
+    border-radius: 4px;
+    border: 0.5px solid #a49696;
+}
+
+.textarea{
+    display: block;
+    width: 90%;
+    outline: none;
+    padding: 5px 8px;
+    font-size: 1.2rem;
+    min-height: 125px;
+    border-radius: 4px;
+    border: 0.5px solid #a49696;
+}

@@ -1,0 +1,15 @@
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-self: center;
+  max-width: 90vw;
+}
+
+.card {
+  margin: 1rem;
+  padding: 1.5rem;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  width: 50vw;
+}

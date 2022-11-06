@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
-import styles from "../../styles/blog.module.css";
+import styles from "../../styles/BlogPage.module.css";
 import * as fs from "fs";
 import Head from 'next/head'
 
 const Slug = (props) => {
+
+    function createMarkup(conten){
+        return {__html: conten};
+    }
 
     // console.log(props)
     const [blogs, setBlogs] = useState(props.data);
@@ -21,9 +25,10 @@ const Slug = (props) => {
                     {
                         blogs && <a className={styles.card}>
                             <h1>{blogs.title}</h1>
-                            <p>{blogs.desc}</p>
+                            <div dangerouslySetInnerHTML={createMarkup(blogs.desc)}></div>
                         </a>
-                    } </div>
+                    } 
+                </div>
             </main>
         </>
     )

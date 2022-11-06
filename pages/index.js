@@ -31,7 +31,7 @@ export default function Home() {
         <div className={styles.blogs}>
 
 
-          <h2>Top tranding blogs</h2>
+          <h2>Top Tranding Blogs</h2>
           <div className={styles.grid}>
           <Link href="/blog">
             <a className={styles.card}>
@@ -80,7 +80,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{' Me '}
           <span className={styles.logo}>
             {/* <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} /> */}
           </span>

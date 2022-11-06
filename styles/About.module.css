@@ -1,0 +1,26 @@
+.mainContainer{
+    width: 60vw;
+    margin: 5px auto;
+    padding: 5px 0px;
+}
+.mainContainer h1{
+    text-align: center;
+    margin-top: 5px;
+    font-size: 1.9rem;
+
+}
+.container{
+    margin: 15px 2px;
+}
+.container h2{
+    font-size: 1.4rem;
+    margin: 2px 0px;
+}
+.container p {
+    font-size: 0.9rem;
+}
+
+.list {
+    font-size: 0.9rem;
+    margin-left: 40px;
+}
