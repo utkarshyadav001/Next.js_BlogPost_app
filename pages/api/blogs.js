@@ -1,22 +1,26 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-// http://localhost:3000/api/blogs
+// http://localhost:3000/api/blogs?count=2
 
 import * as fs from "fs";
 
 export default async function handler(req, res) {
 
   let fileNameArray;
-  let blogs = []
+  let blogs = [];
+  let {count} = req.query;
+  console.log(count)
 
   fileNameArray = await fs.promises.readdir("blogpost");
-
+  fileNameArray = fileNameArray.slice(0, parseInt(count));
   // console.log(fileNameArray,"e");
 
   for (let index = 0; index < fileNameArray.length; index++) {
     const fileName = fileNameArray[index];
     // console.log(fileName)
     await fs.promises.readFile(`blogpost/${fileName}`, "utf-8").then((e)=>{
-      blogs.push( JSON.parse(e))
+      let {title, author, metadesc, slug} = JSON.parse(e)
+      let cBlog = {title, author, metadesc, slug};
+      blogs.push(cBlog)
     });
     
   }

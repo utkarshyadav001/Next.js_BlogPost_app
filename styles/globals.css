@@ -21,6 +21,7 @@ a {
   html {
     color-scheme: dark;
   }
+
   body {
     color: white;
     background: black;
@@ -32,23 +33,24 @@ a {
   padding: 1rem 0px;
   border-bottom: 1px solid #eaeaea;
 }
-.navbar ul{
+
+.navbar ul {
   display: flex;
   justify-content: center;
 }
 
-.navbar ul li{
+.navbar ul li {
   list-style: none;
   font-weight: bold;
   padding: 0px 12px;
   font-size: 1.05rem;
 }
 
-.navbar ul a :hover{
+.navbar ul a :hover {
   color: blue;
 }
 
-.btn{
+.btn {
   padding: 5px 8px;
   background-color: black;
   color: white;
@@ -61,4 +63,45 @@ a {
 .btn:focus,
 .btn:active {
   color: green;
+}
+
+
+
+
+@media (max-width: 375px) {
+  body {
+    font-size: 11px;
+  }
+
+  .navbar {
+    padding: 0.5rem 0px;
+  }
+
+  .navbar ul li {
+    font-size: 0.8rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
+
+  .btn {
+    font-size: 12px;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    font-size: 17px;
+  }
 }

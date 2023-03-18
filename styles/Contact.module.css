@@ -1,5 +1,5 @@
 .main {
-    width: 55vw;
+    width: 50vw;
     margin: 18px auto;
 }
 
@@ -18,7 +18,7 @@
 
 .input {
     display: block;
-    width: 90%;
+    width: 100%;
     padding: 5px 5px;
     font-size: 1.1rem;
     outline: none;
@@ -27,13 +27,26 @@
     border: 0.5px solid #a49696;
 }
 
-.textarea{
+.textarea {
     display: block;
-    width: 90%;
+    width: 100%;
     outline: none;
     padding: 5px 8px;
     font-size: 1.2rem;
     min-height: 125px;
     border-radius: 4px;
     border: 0.5px solid #a49696;
+}
+
+
+@media (min-width: 0px) and (max-width: 500px) {
+    .main {
+        width: 90vw;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+    .main {
+        width: 70vw;
+    }
 }
